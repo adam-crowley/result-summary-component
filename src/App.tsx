@@ -1,33 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <main className="main">
+        <div className="main__left">
+          <h1>Your Result</h1>
+          <div className="main__score">76 of 100</div>{' '}
+          <div className="main__eval">Great</div>
+          <p>
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+        <div className="main__right">
+          <h2>Summary</h2>
+          <ul>
+            <li>
+              <span>Reaction</span> <span>80</span> <span>/ 100</span>
+            </li>
+            <li>
+              <span>Memory</span> <span>92</span> <span>/ 100</span>
+            </li>
+            <li>
+              <span>Verbal</span> <span>61</span> <span>/ 100</span>
+            </li>
+            <li>
+              <span>Visual</span> <span>72</span> <span>/ 100</span>
+            </li>
+          </ul>
+          <button>Continue</button>
+        </div>
+      </main>
+      <footer className="attribution">
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          Challenge by{' '}
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+            Frontend Mentor
+          </a>
+          . Coded by <a href="https://github.com/adam-crowley">Adam Crowley</a>.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </footer>
     </>
   )
 }
