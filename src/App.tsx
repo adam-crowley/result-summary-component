@@ -4,7 +4,10 @@ function App() {
       <main className="main">
         <div className="main__left">
           <h1>Your Result</h1>
-          <div className="main__score">76 of 100</div>{' '}
+          <div className="main__score">
+            <span className="main__number-1">76</span>
+            <span className="main__number-2">of 100</span>
+          </div>
           <div className="main__eval">Great</div>
           <p>
             You scored higher than 65% of the people who have taken these tests.
