@@ -28,7 +28,7 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: 1em; /* 16px */
-  line-height: 1.5;
+  line-height: 1.4;
   color: var(--Dark-gray-blue);
   background-color: var(--Pale-blue);
   height: 100vh;
@@ -114,6 +114,14 @@ strong {
 @media (min-width: 768px) {
   .main__left h1 {
     font-size: 1.5rem;
+  }
+}
+.main__left p {
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .main__left p {
+    font-size: 1.125rem;
   }
 }
 .main__eval {
