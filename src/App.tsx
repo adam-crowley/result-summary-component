@@ -1,3 +1,5 @@
+import data from './data.json'
+
 function App() {
   return (
     <>
@@ -16,18 +18,17 @@ function App() {
         <div className="main__right">
           <h2>Summary</h2>
           <ul>
-            <li>
-              <span>Reaction</span> <span>80</span> <span>/ 100</span>
-            </li>
-            <li>
-              <span>Memory</span> <span>92</span> <span>/ 100</span>
-            </li>
-            <li>
-              <span>Verbal</span> <span>61</span> <span>/ 100</span>
-            </li>
-            <li>
-              <span>Visual</span> <span>72</span> <span>/ 100</span>
-            </li>
+            {data.map((item, index) => (
+              <li key={item.category} className={`li-${index.toString()}`}>
+                <span className="main__metric">
+                  <img src={item.icon} alt="" />
+                  <span>{item.category}</span>
+                </span>
+                <span className="main__item-score">
+                  {item.score} <span>/ 100</span>
+                </span>
+              </li>
+            ))}
           </ul>
           <button>Continue</button>
         </div>
